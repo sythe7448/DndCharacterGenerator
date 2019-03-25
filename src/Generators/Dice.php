@@ -1,4 +1,7 @@
 <?php
+declare (strict_types=1);
+
+namespace DND\Generators;
 
 /**
  * A random number generator based on dice size.

@@ -1,6 +1,8 @@
 <?php
 declare (strict_types=1);
 
+namespace DND\Character\Dependencies;
+
     class Stats
     {
 
@@ -45,27 +47,6 @@ declare (strict_types=1);
          * @var int
          */
         private $charisma;
-
-        /**
-         * Stats constructor.
-         *
-         * @param int $strength
-         * @param int $dexterity
-         * @param int $constitution
-         * @param int $intelligence
-         * @param int $wisdom
-         * @param int $charisma
-         */
-        public function __construct (int $strength, int $dexterity, int $constitution, int $intelligence, int $wisdom, int $charisma)
-        {
-            $this->strength = $strength;
-            $this->dexterity = $dexterity;
-            $this->constitution = $constitution;
-            $this->intelligence = $intelligence;
-            $this->wisdom = $wisdom;
-            $this->charisma = $charisma;
-        }
-
 
         /**
          * @return int

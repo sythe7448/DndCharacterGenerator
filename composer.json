@@ -1,5 +1,5 @@
 {
-  "name": "Jake/DNDCharacterGenerator",
+  "name": "jake/dndcharactergenerator",
   "description": "A Character Generator for DnD",
   "minimum-stability": "stable",
   "license": "proprietary",
@@ -15,7 +15,8 @@
   },
   "autoload": {
     "psr-4": {
-      "DND\\": "src/"
+      "DND\\": "src/",
+      "Tests\\": "tests/"
     }
   }
 }

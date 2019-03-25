@@ -1,4 +1,7 @@
 <?php
+declare (strict_types=1);
+
+namespace DND\Character\Dependencies;
 
 class AbilityScores extends Stats
 {
@@ -48,14 +51,15 @@ class AbilityScores extends Stats
      * AbilityScores constructor.
      *
      */
+
 //    public function __construct ()
 //    {
-//        $this->strengthModifier = intdiv($this->getStrength() - 10,2);
-//        $this->dexterityModifier = intdiv($this->getDexterity() - 10,2);
-//        $this->constitutionModifier = intdiv($this->getConstitution() - 10,2);
-//        $this->intelligenceModifier = intdiv($this->getIntelligence() - 10,2);
-//        $this->wisdomModifier = intdiv($this->getWisdom() - 10,2);
-//        $this->charismaModifier = intdiv($this->getCharisma() - 10,2);
+//        $this->strengthModifier = round(($this->getStrength() - 10)/2);
+//        $this->dexterityModifier = round(($this->getDexterity() - 10)/2);
+//        $this->constitutionModifier = round(($this->getConstitution() - 10)/2);
+//        $this->intelligenceModifier = round(($this->getIntelligence() - 10)/2);
+//        $this->wisdomModifier = round(($this->getWisdom() - 10)/2);
+//        $this->charismaModifier = round(($this->getCharisma() - 10)/2);
 //    }
 
 
@@ -67,12 +71,13 @@ class AbilityScores extends Stats
         return $this->strengthModifier;
     }
 
+
     /**
-     * @param int $strengthModifier
+     * @return int
      */
     public function setStrengthModifier (): int
     {
-        $this->strengthModifier = intdiv($this->getStrength() - 10,2);
+        $this->strengthModifier = Round(($this->getStrength() - 10)/2);
     }
 
     /**
@@ -84,11 +89,11 @@ class AbilityScores extends Stats
     }
 
     /**
-     * @param int $dexterityModifier
+     * @return int
      */
     public function setDexterityModifier (): int
     {
-        $this->dexterityModifier = intdiv($this->getDexterity() - 10,2);
+        $this->dexterityModifier = round(($this->getDexterity() - 10)/2);
     }
 
     /**
@@ -100,11 +105,11 @@ class AbilityScores extends Stats
     }
 
     /**
-     * @param int $constitutionModifier
+     * @return int
      */
     public function setConstitutionModifier (): int
     {
-        $this->constitutionModifier = intdiv($this->getConstitution() - 10,2);
+        $this->constitutionModifier = round(($this->getConstitution() - 10)/2);
     }
 
     /**
@@ -116,11 +121,11 @@ class AbilityScores extends Stats
     }
 
     /**
-     * @param int $intelligenceModifier
+     * @return int
      */
-    public function setIntelligenceModifier (int $intelligenceModifier): int
+    public function setIntelligenceModifier (): int
     {
-        $this->intelligenceModifier = intdiv($this->getIntelligence() - 10,2);
+        $this->intelligenceModifier = round(($this->getIntelligence() - 10)/2);
     }
 
     /**
@@ -132,11 +137,11 @@ class AbilityScores extends Stats
     }
 
     /**
-     * @param int $wisdomModifier
+     * @return Int
      */
     public function setWisdomModifier (): Int
     {
-        $this->wisdomModifier = intdiv($this->getWisdom() - 10,2);
+        $this->wisdomModifier = round(($this->getWisdom() - 10)/2);
     }
 
     /**
@@ -147,12 +152,13 @@ class AbilityScores extends Stats
         return $this->charismaModifier;
     }
 
+
     /**
-     * @param int $charismaModifier
+     * @return int
      */
     public function setCharismaModifier (): int
     {
-        $this->charismaModifier = intdiv($this->getCharismaModifier() - 10,2);
+        $this->charismaModifier = round(($this->getCharismaModifier() - 10)/2);
     }
 
 
