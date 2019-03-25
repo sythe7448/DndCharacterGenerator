@@ -20,13 +20,53 @@ class StatGeneratorTest extends TestCase
     }
 
 
-    public function testD4 (): void
+    public function testStatGen (): void
     {
-        $dieSize = 4;
-        for ($i = 1; $i <= ($dieSize * 3); $i++) {
-            $this->assertLessThanOrEqual($dieSize, $this->_class->d4());
-            $this->assertIsInt($this->_class->d4());
-            $this->assertGreaterThan(0, $this->_class->d4());
+        $statMax = 18;
+        for ($i = 1; $i <= ($statMax * 3); $i++) {
+            $this->assertLessThanOrEqual($statMax, $this->_class->statGen());
+            $this->assertIsInt($this->_class->statGen());
+            $this->assertGreaterThan(0, $this->_class->statGen());
+        }
+    }
+
+    public function testHeroStatGen (): void
+    {
+        $statMax = 18;
+        for ($i = 1; $i <= ($statMax * 3); $i++) {
+            $this->assertLessThanOrEqual($statMax, $this->_class->herostatgen());
+            $this->assertIsInt($this->_class->herostatgen());
+            $this->assertGreaterThan(0, $this->_class->herostatgen());
+        }
+    }
+
+    public function testNpcStats (): void
+    {
+        $statMax = 18;
+        $stats = $this->_class->npcStats();
+        $statMaxArray = [18, 18, 18, 18, 18, 18];
+        $this->assertIsArray($this->_class->npcStats());
+        for ($i = 1; $i <= ($statMax * 3); $i++) {
+            foreach ($stats as $key => $value) {
+                $this->assertLessThanOrEqual($statMaxArray, $value);
+                $this->assertIsInt($value);
+                $this->assertGreaterThan(0, $value);
+            }
+        }
+    }
+
+    public function testHeroStats (): void
+    {
+        $statMax = 18;
+        $stats = $this->_class->heroStats();
+        $statMaxArray = [18, 18, 18, 18, 18, 18];
+        $this->assertIsArray($this->_class->heroStats());
+        for ($i = 1; $i <= ($statMax * 3); $i++) {
+            foreach ($stats as $key => $value) {
+                $this->assertLessThanOrEqual($statMaxArray, $value);
+                $this->assertIsInt($value);
+                $this->assertGreaterThan(0, $value);
+            }
         }
     }
 

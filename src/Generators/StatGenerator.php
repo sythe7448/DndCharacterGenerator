@@ -6,7 +6,7 @@ namespace DND\Generators;
 class StatGenerator extends Dice
 {
 
-    public function statgen ()
+    public function statGen ()
     {
         $statrolls = [];
         for ($i = 0; $i <= 2; $i++) {
@@ -30,7 +30,7 @@ class StatGenerator extends Dice
     {
         $stats = [];
         for ($i = 0; $i <= 5; $i++) {
-            $stats = $this->statgen();
+            $stats[] = $this->statGen();
         }
         return $stats;
     }
@@ -39,7 +39,7 @@ class StatGenerator extends Dice
     {
         $stats = [];
         for ($i = 0; $i <= 5; $i++) {
-            $stats = $this->herostatgen();
+            $stats[] = $this->herostatgen();
         }
         return $stats;
     }
