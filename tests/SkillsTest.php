@@ -1,9 +1,7 @@
 <?php
 namespace Tests;
 
-use DND\Character\Dependencies\AbilityScores;
 use DND\Character\Dependencies\Skills;
-use DND\Character\Dependencies\Stats;
 use PHPUnit\Framework\TestCase;
 
 class SkillsTest extends TestCase

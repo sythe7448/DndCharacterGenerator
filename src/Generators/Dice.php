@@ -27,6 +27,11 @@ class Dice
         return random_int(1, 10);
     }
 
+    public function d12 (): int
+    {
+        return random_int(1, 12);
+    }
+
     public function d20 (): int
     {
         return random_int(1, 20);

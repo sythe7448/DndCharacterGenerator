@@ -28,16 +28,18 @@ class StatGenerator extends Dice
 
     public function npcStats () : array
     {
+        $stats = [];
         for ($i = 0; $i <= 5; $i++) {
-            $stats[] = $this->statgen();
+            $stats = $this->statgen();
         }
         return $stats;
     }
 
-    public function heroStats ()
+    public function heroStats () : array
     {
+        $stats = [];
         for ($i = 0; $i <= 5; $i++) {
-            $stats[] = $this->herostatgen();
+            $stats = $this->herostatgen();
         }
         return $stats;
     }
