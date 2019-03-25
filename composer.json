@@ -1,0 +1,21 @@
+{
+  "name": "Jake/DNDCharacterGenerator",
+  "description": "A Character Generator for DnD",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Jake Colburn",
+      "email": "jakecolburn.sythe@gmail.com"
+    }
+  ],
+  "require": {
+    "roave/security-advisories": "dev-master",
+    "phpunit/phpunit": "8.0.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "DND\\": "src/"
+    }
+  }
+}
