@@ -3,6 +3,8 @@ declare (strict_types=1);
 
 namespace DND\Character\Dependencies;
 
+use DND\Items\Item;
+
 class EquippedItems
 {
 
@@ -31,7 +33,7 @@ class EquippedItems
     public function remove (Item $item): void
     {
         foreach ($this->equippedItems as $key => $entity) {
-            if ($item->getId() == $entity->getId()) {
+            if ($item->getId() === $entity->getId()) {
                 unset($this->equippedItems[$key]);
                 break;
             }

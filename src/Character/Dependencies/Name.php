@@ -49,25 +49,9 @@ class Name
     private $title;
 
     /**
-     * @return int
-     */
-    public function getId (): int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId (int $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
      * @return string
      */
-    public function getPrefix ()
+    public function getPrefix () :string
     {
         return $this->prefix;
     }
@@ -75,7 +59,7 @@ class Name
     /**
      * @param string $prefix
      */
-    public function setPrefix ($prefix)
+    public function setPrefix ($prefix): void
     {
         $this->prefix = $prefix;
     }
@@ -83,7 +67,7 @@ class Name
     /**
      * @return string
      */
-    public function getFirstName ()
+    public function getFirstName (): string
     {
         return $this->firstName;
     }
@@ -91,7 +75,7 @@ class Name
     /**
      * @param string $firstName
      */
-    public function setFirstName ($firstName)
+    public function setFirstName ($firstName): void
     {
         $this->firstName = $firstName;
     }
@@ -99,7 +83,7 @@ class Name
     /**
      * @return string
      */
-    public function getMiddleName ()
+    public function getMiddleName (): string
     {
         return $this->middleName;
     }
@@ -107,7 +91,7 @@ class Name
     /**
      * @param string $middleName
      */
-    public function setMiddleName ($middleName)
+    public function setMiddleName ($middleName): void
     {
         $this->middleName = $middleName;
     }
@@ -115,7 +99,7 @@ class Name
     /**
      * @return string
      */
-    public function getLastName ()
+    public function getLastName (): string
     {
         return $this->lastName;
     }
@@ -123,7 +107,7 @@ class Name
     /**
      * @param string $lastName
      */
-    public function setLastName ($lastName)
+    public function setLastName ($lastName): void
     {
         $this->lastName = $lastName;
     }
@@ -131,7 +115,7 @@ class Name
     /**
      * @return string
      */
-    public function getSuffix ()
+    public function getSuffix (): string
     {
         return $this->suffix;
     }
@@ -139,7 +123,7 @@ class Name
     /**
      * @param string $suffix
      */
-    public function setSuffix ($suffix)
+    public function setSuffix ($suffix): void
     {
         $this->suffix = $suffix;
     }
@@ -147,7 +131,7 @@ class Name
     /**
      * @return string
      */
-    public function getTitle ()
+    public function getTitle (): string
     {
         return $this->title;
     }
@@ -155,7 +139,7 @@ class Name
     /**
      * @param string $title
      */
-    public function setTitle ($title)
+    public function setTitle ($title): void
     {
         $this->title = $title;
     }

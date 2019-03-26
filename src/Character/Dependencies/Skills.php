@@ -3,12 +3,10 @@ declare (strict_types=1);
 
 namespace DND\Character\Dependencies;
 
-use DND\Character\Character;
-
 class Skills extends AbilityScores
 {
     /**
-     * The proficiency mod of the character
+     * The proficiency mod of the character for skills
      *
      * @return int
      */

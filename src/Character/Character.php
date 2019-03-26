@@ -23,13 +23,6 @@ class Character
     private $name;
 
     /**
-     * The level of the character
-     *
-     * @var int
-     */
-    private $level;
-
-    /**
      * The alignment of the character
      *
      * @var string
@@ -213,27 +206,6 @@ class Character
     public function setName ($name): void
     {
         $this->name = $name;
-    }
-
-    /**
-     * @return int
-     */
-    public function getLevel (): int
-    {
-        return $this->level;
-    }
-
-    /**
-     * @param int $level
-     */
-    public function setLevel (int $level): void
-    {
-        $this->level = $level;
-    }
-
-    public function getProficiencyMod (): int
-    {
-        return ($this->level / 4) + 1;
     }
 
 }

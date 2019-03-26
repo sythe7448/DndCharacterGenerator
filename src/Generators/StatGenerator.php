@@ -45,26 +45,3 @@ class StatGenerator extends Dice
     }
 
 }
-
-//$npcStats = npcStats();
-//$herostats = $this->heroStats();
-//
-//$hero = new Skills($herostats[0], $herostats[1], $herostats[2], $herostats[3], $herostats[4], $herostats[5]);
-//$npc = new Skills();
-//
-//$hero->setStrength($herostats[0]);
-//$hero->setDexterity($herostats[1]);
-//$hero->setConstitution($herostats[2]);
-//$hero->setIntelligence($herostats[3]);
-//$hero->setWisdom($herostats[4]);
-//$hero->setCharisma($herostats[5]);
-//
-//$npc->setStrength($npcStats[0]);
-//$npc->setDexterity($npcStats[1]);
-//$npc->setConstitution($npcStats[2]);
-//$npc->setIntelligence($npcStats[3]);
-//$npc->setWisdom($npcStats[4]);
-//$npc->setCharisma($npcStats[5]);
-//
-//
-//var_dump($hero);
