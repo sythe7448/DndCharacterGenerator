@@ -183,5 +183,57 @@ class Character
      */
     private $gameMasterNotes;
 
+    /**
+     * @return int
+     */
+    public function getId (): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId (int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName ()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName ($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLevel (): int
+    {
+        return $this->level;
+    }
+
+    /**
+     * @param int $level
+     */
+    public function setLevel (int $level): void
+    {
+        $this->level = $level;
+    }
+
+    public function getProficiencyMod (): int
+    {
+        return ($this->level / 4) + 1;
+    }
 
 }

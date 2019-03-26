@@ -15,6 +15,7 @@ class SkillsTest extends TestCase
     {
         parent::setUp();
         $this->_class = new Skills();
+        $this->_class->setLevel(13);
         $this->_class->setStrength(12);
         $this->_class->setDexterity(18);
         $this->_class->setConstitution(10);
@@ -24,6 +25,11 @@ class SkillsTest extends TestCase
 
     }
 
+    public function testGetProficiencyMod () : void
+    {
+        $this->assertIsInt($this->_class->getProficiencyMod());
+        $this->assertEquals(5, $this->_class->getProficiencyMod());
+    }
 
     public function testGetAcrobatics () : void
     {

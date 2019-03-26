@@ -3,8 +3,19 @@ declare (strict_types=1);
 
 namespace DND\Character\Dependencies;
 
+use DND\Character\Character;
+
 class Skills extends AbilityScores
 {
+    /**
+     * The proficiency mod of the character
+     *
+     * @return int
+     */
+    public function getProficiencyMod (): int
+    {
+        return (int)ceil(($this->getLevel() / 4) + 1);
+    }
 
     /**
      * @return int

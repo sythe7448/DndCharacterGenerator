@@ -7,6 +7,13 @@ namespace DND\Character\Dependencies;
     {
 
         /**
+         * The level of the character
+         *
+         * @var int
+         */
+        private $level;
+
+        /**
          * The strength of the character
          *
          * @var int
@@ -47,6 +54,22 @@ namespace DND\Character\Dependencies;
          * @var int
          */
         private $charisma;
+
+        /**
+         * @return int
+         */
+        public function getLevel (): int
+        {
+            return $this->level;
+        }
+
+        /**
+         * @param int $level
+         */
+        public function setLevel (int $level): void
+        {
+            $this->level = $level;
+        }
 
         /**
          * @return int
@@ -143,4 +166,5 @@ namespace DND\Character\Dependencies;
         {
             $this->charisma = $charisma;
         }
+
     }
