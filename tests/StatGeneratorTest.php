@@ -34,9 +34,9 @@ class StatGeneratorTest extends TestCase
     {
         $statMax = 18;
         for ($i = 1; $i <= ($statMax * 3); $i++) {
-            $this->assertLessThanOrEqual($statMax, $this->_class->herostatgen());
-            $this->assertIsInt($this->_class->herostatgen());
-            $this->assertGreaterThan(0, $this->_class->herostatgen());
+            $this->assertLessThanOrEqual($statMax, $this->_class->heroStatGen());
+            $this->assertIsInt($this->_class->heroStatGen());
+            $this->assertGreaterThan(0, $this->_class->heroStatGen());
         }
     }
 

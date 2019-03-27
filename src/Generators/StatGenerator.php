@@ -15,7 +15,7 @@ class StatGenerator extends Dice
         return array_sum($statrolls);
     }
 
-    public function herostatgen ()
+    public function heroStatGen ()
     {
         $statrolls = [];
         for ($i = 0; $i <= 3; $i++) {
@@ -39,7 +39,7 @@ class StatGenerator extends Dice
     {
         $stats = [];
         for ($i = 0; $i <= 5; $i++) {
-            $stats[] = $this->herostatgen();
+            $stats[] = $this->heroStatGen();
         }
         return $stats;
     }

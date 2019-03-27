@@ -2,6 +2,7 @@
 namespace Tests;
 
 use DND\Character\Dependencies\AbilityScores;
+use DND\Character\Dependencies\Stats;
 use PHPUnit\Framework\TestCase;
 
 class AbilityScoresTest extends TestCase
@@ -14,13 +15,8 @@ class AbilityScoresTest extends TestCase
     public function setUp (): void
     {
         parent::setUp();
-        $this->_class = new AbilityScores();
-        $this->_class->setStrength(12);
-        $this->_class->setDexterity(18);
-        $this->_class->setConstitution(10);
-        $this->_class->setIntelligence(11);
-        $this->_class->setWisdom(14);
-        $this->_class->setCharisma(16);
+        $stats = new Stats(12, 18, 10, 11, 14, 16);
+        $this->_class = new AbilityScores($stats);
 
     }
 

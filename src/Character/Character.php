@@ -3,8 +3,12 @@ declare (strict_types=1);
 
 namespace DND\Character;
 
+use DND\Character\Dependencies\Stats;
+use DND\Generators\StatGenerator;
+
 class Character
 {
+    protected $statgen;
 
     /**
      * The id of the character
@@ -175,6 +179,17 @@ class Character
      * @var string
      */
     private $gameMasterNotes;
+
+    /**
+     * Character constructor.
+     *
+     * @param $stats
+     */
+//    public function __construct ()
+//    {
+//        $this->statgen = new StatGenerator();
+//        $this->stats = new Stats($this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen());
+//    }
 
     /**
      * @return int

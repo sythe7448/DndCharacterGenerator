@@ -7,13 +7,6 @@ namespace DND\Character\Dependencies;
     {
 
         /**
-         * The level of the character
-         *
-         * @var int
-         */
-        private $level;
-
-        /**
          * The strength of the character
          *
          * @var int
@@ -56,11 +49,23 @@ namespace DND\Character\Dependencies;
         private $charisma;
 
         /**
-         * @return int
+         * Stats constructor.
+         *
+         * @param int $strength
+         * @param int $dexterity
+         * @param int $constitution
+         * @param int $intelligence
+         * @param int $wisdom
+         * @param int $charisma
          */
-        public function getLevel (): int
+        public function __construct (int $strength, int $dexterity, int $constitution, int $intelligence, int $wisdom, int $charisma)
         {
-            return $this->level;
+            $this->strength = $strength;
+            $this->dexterity = $dexterity;
+            $this->constitution = $constitution;
+            $this->intelligence = $intelligence;
+            $this->wisdom = $wisdom;
+            $this->charisma = $charisma;
         }
 
         /**

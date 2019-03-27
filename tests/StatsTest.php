@@ -14,13 +14,7 @@ class StatsTest extends TestCase
     public function setUp (): void
     {
         parent::setUp();
-        $this->_class = new Stats();
-        $this->_class->setStrength(12);
-        $this->_class->setDexterity(18);
-        $this->_class->setConstitution(10);
-        $this->_class->setIntelligence(11);
-        $this->_class->setWisdom(14);
-        $this->_class->setCharisma(16);
+        $this->_class = new Stats(12, 18, 10, 11, 14, 16);
 
     }
 

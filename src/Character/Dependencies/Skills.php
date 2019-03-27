@@ -3,24 +3,42 @@ declare (strict_types=1);
 
 namespace DND\Character\Dependencies;
 
-class Skills extends AbilityScores
+use DND\Character\Dependencies\AbilityScores;
+
+class Skills
 {
+    /**
+     * @var AbilityScores
+     */
+    protected $abilityScores;
+
+    /**
+     * Skills constructor.
+     *
+     * @param $abilityScores
+     */
+    public function __construct (AbilityScores $abilityScores)
+    {
+        $this->abilityScores = $abilityScores;
+    }
+
+
     /**
      * The proficiency mod of the character for skills
      *
      * @return int
      */
-    public function getProficiencyMod (): int
-    {
-        return (int)ceil(($this->getLevel() / 4) + 1);
-    }
+//    public function getProficiencyMod (): int
+//    {
+//        return (int)ceil(($this->getLevel() / 4) + 1);
+//    }
 
     /**
      * @return int
      */
     public function getAcrobatics (): int
     {
-        return 10 + $this->getDexterityScore();
+        return 10 + $this->abilityScores->getDexterityScore();
     }
 
     /**
@@ -28,7 +46,7 @@ class Skills extends AbilityScores
      */
     public function getAnimalHandling (): int
     {
-        return 10 + $this->getWisdomScore();
+        return 10 + $this->abilityScores->getWisdomScore();
     }
 
     /**
@@ -36,7 +54,7 @@ class Skills extends AbilityScores
      */
     public function getArcana (): int
     {
-        return 10 + $this->getIntelligenceScore();
+        return 10 + $this->abilityScores->getIntelligenceScore();
     }
 
     /**
@@ -44,7 +62,7 @@ class Skills extends AbilityScores
      */
     public function getAthletics (): int
     {
-        return 10 + $this->getStrengthScore();
+        return 10 + $this->abilityScores->getStrengthScore();
     }
 
     /**
@@ -52,7 +70,7 @@ class Skills extends AbilityScores
      */
     public function getDeception (): int
     {
-        return 10 + $this->getCharismaScore();
+        return 10 + $this->abilityScores->getCharismaScore();
     }
 
     /**
@@ -60,7 +78,7 @@ class Skills extends AbilityScores
      */
     public function getHistory (): int
     {
-        return 10 + $this->getIntelligenceScore();
+        return 10 + $this->abilityScores->getIntelligenceScore();
     }
 
     /**
@@ -68,7 +86,7 @@ class Skills extends AbilityScores
      */
     public function getInsight (): int
     {
-        return 10 + $this->getWisdomScore();
+        return 10 + $this->abilityScores->getWisdomScore();
     }
 
     /**
@@ -76,7 +94,7 @@ class Skills extends AbilityScores
      */
     public function getIntimidation (): int
     {
-        return 10 + $this->getCharismaScore();
+        return 10 + $this->abilityScores->getCharismaScore();
     }
 
     /**
@@ -84,7 +102,7 @@ class Skills extends AbilityScores
      */
     public function getInvestigation (): int
     {
-        return 10 + $this->getIntelligenceScore();
+        return 10 + $this->abilityScores->getIntelligenceScore();
     }
 
     /**
@@ -92,7 +110,7 @@ class Skills extends AbilityScores
      */
     public function getMedicine (): int
     {
-        return 10 + $this->getWisdomScore();
+        return 10 + $this->abilityScores->getWisdomScore();
     }
 
     /**
@@ -100,7 +118,7 @@ class Skills extends AbilityScores
      */
     public function getNature (): int
     {
-        return 10 + $this->getIntelligenceScore();
+        return 10 + $this->abilityScores->getIntelligenceScore();
     }
 
     /**
@@ -108,7 +126,7 @@ class Skills extends AbilityScores
      */
     public function getPerception (): int
     {
-        return 10 + $this->getWisdomScore();
+        return 10 + $this->abilityScores->getWisdomScore();
     }
 
     /**
@@ -116,7 +134,7 @@ class Skills extends AbilityScores
      */
     public function getPerformance (): int
     {
-        return 10 + $this->getCharismaScore();
+        return 10 + $this->abilityScores->getCharismaScore();
     }
 
     /**
@@ -124,7 +142,7 @@ class Skills extends AbilityScores
      */
     public function getPersuasion (): int
     {
-        return 10 + $this->getCharismaScore();
+        return 10 + $this->abilityScores->getCharismaScore();
     }
 
     /**
@@ -132,7 +150,7 @@ class Skills extends AbilityScores
      */
     public function getReligion (): int
     {
-        return 10 + $this->getIntelligenceScore();
+        return 10 + $this->abilityScores->getIntelligenceScore();
     }
 
     /**
@@ -140,7 +158,7 @@ class Skills extends AbilityScores
      */
     public function getSleightOfHand (): int
     {
-        return 10 + $this->getDexterityScore();
+        return 10 + $this->abilityScores->getDexterityScore();
     }
 
     /**
@@ -148,7 +166,7 @@ class Skills extends AbilityScores
      */
     public function getStealth (): int
     {
-        return 10 + $this->getDexterityScore();
+        return 10 + $this->abilityScores->getDexterityScore();
     }
 
     /**
@@ -156,7 +174,7 @@ class Skills extends AbilityScores
      */
     public function getSurvival (): int
     {
-        return 10 + $this->getWisdomScore();
+        return 10 + $this->abilityScores->getWisdomScore();
     }
 
 
