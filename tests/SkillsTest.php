@@ -17,15 +17,15 @@ class SkillsTest extends TestCase
     {
         parent::setUp();
         $abilityScores = new AbilityScores(new Stats(12, 18, 10, 11, 14, 16));
-        $this->_class = new Skills($abilityScores);
+        $this->_class = new Skills($abilityScores, 16);
 
     }
 
-//    public function testGetProficiencyMod () : void
-//    {
-//        $this->assertIsInt($this->_class->getProficiencyMod());
-//        $this->assertEquals(5, $this->_class->getProficiencyMod());
-//    }
+    public function testGetProficiencyMod () : void
+    {
+        $this->assertIsInt($this->_class->getProficiencyMod());
+        $this->assertEquals(5, $this->_class->getProficiencyMod());
+    }
 
     public function testGetAcrobatics () : void
     {

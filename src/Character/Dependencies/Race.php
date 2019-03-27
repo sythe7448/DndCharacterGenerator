@@ -3,15 +3,11 @@ declare (strict_types=1);
 
 namespace DND\Character\Dependencies;
 
+use DND\Character\Dependencies\Stats;
+
 class Race
 {
 
-    /**
-     * The Id of the race
-     *
-     * @var int
-     */
-    private $id;
 
     /**
      * The name of the race
@@ -23,7 +19,7 @@ class Race
     /**
      * The stat modifiers of the race
      *
-     * @param Stats $stats
+     * @var Stats $stats
      */
     private $stats;
 
@@ -37,7 +33,7 @@ class Race
     /**
      * The base move speed for this race (in feet per round)
      *
-     * @param RacialSpeed $speed
+     * @var RacialSpeed $speed
      */
     private $speed;
 
@@ -58,7 +54,122 @@ class Race
     /**
      * The race features
      *
-     * @var string
+     * @var array
      */
     private $features;
+
+
+    /**
+     * @return string
+     */
+    public function getName (): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName (string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStats ()
+    {
+        return $this->stats;
+    }
+
+    /**
+     * @param Stats $stats
+     */
+    public function setStats (Stats $stats): void
+    {
+        $this->stats = $stats;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSize (): string
+    {
+        return $this->size;
+    }
+
+    /**
+     * @param string $size
+     */
+    public function setSize (string $size): void
+    {
+        $this->size = $size;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSpeed ()
+    {
+        return $this->speed;
+    }
+
+    /**
+     * @param mixed $speed
+     */
+    public function setSpeed ($speed): void
+    {
+        $this->speed = $speed;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVision (): string
+    {
+        return $this->vision;
+    }
+
+    /**
+     * @param string $vision
+     */
+    public function setVision (string $vision): void
+    {
+        $this->vision = $vision;
+    }
+
+    /**
+     * @return array
+     */
+    public function getLanguages (): array
+    {
+        return $this->languages;
+    }
+
+    /**
+     * @param array $languages
+     */
+    public function setLanguages (array $languages): void
+    {
+        $this->languages = $languages;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFeatures (): array
+    {
+        return $this->features;
+    }
+
+    /**
+     * @param array $features
+     */
+    public function setFeatures (array $features): void
+    {
+        $this->features = $features;
+    }
+
+
 }

@@ -10,16 +10,19 @@ class Skills
     /**
      * @var AbilityScores
      */
-    protected $abilityScores;
+    private $abilityScores;
+
+    private $level;
 
     /**
      * Skills constructor.
      *
-     * @param $abilityScores
+     * @var $abilityScores
      */
-    public function __construct (AbilityScores $abilityScores)
+    public function __construct (AbilityScores $abilityScores, $level)
     {
         $this->abilityScores = $abilityScores;
+        $this->level = $level;
     }
 
 
@@ -28,10 +31,10 @@ class Skills
      *
      * @return int
      */
-//    public function getProficiencyMod (): int
-//    {
-//        return (int)ceil(($this->getLevel() / 4) + 1);
-//    }
+    public function getProficiencyMod (): int
+    {
+        return (int)ceil(($this->level / 4) + 1);
+    }
 
     /**
      * @return int

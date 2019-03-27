@@ -8,7 +8,6 @@ use DND\Generators\StatGenerator;
 
 class Character
 {
-    protected $statgen;
 
     /**
      * The id of the character
@@ -36,35 +35,35 @@ class Character
     /**
      * The alignment of the character
      *
-     * @param Race $race
+     * @var Race $race
      */
     private $race;
 
     /**
      * The size of the character
      *
-     * @param Race $size
+     * @var Race $size
      */
     private $size;
 
     /**
      * The class of the character
      *
-     * @param CharacterClass $characterClass
+     * @var CharacterClass $characterClass
      */
     private $characterClass;
 
     /**
      * The speed of the character on ground, water and air.
      *
-     * @param Race $speed
+     * @var Race $speed
      */
     private $speed;
 
     /**
      * The vision of the character
      *
-     * @param Race $vision
+     * @var Race $vision
      */
     private $vision;
 
@@ -78,7 +77,7 @@ class Character
     /**
      * Contains the weight carried and how much the character can physically carry
      *
-     * @param WeightCarried $weightCarried
+     * @var WeightCarried $weightCarried
      */
     private $weightCarried;
 
@@ -134,21 +133,21 @@ class Character
     /**
      * The background of the character
      *
-     * @param Background $background
+     * @var Background $background
      */
     private $background;
 
     /**
      * The collection of items a character has equipped on its person
      *
-     * @param EquippedItems $equippedItems
+     * @var EquippedItems $equippedItems
      */
     private $equippedItems;
 
     /**
      * The collection of items that the character has store on their person
      *
-     * @param Inventory $inventory
+     * @var Inventory $inventory
      */
     private $inventory;
 
@@ -162,7 +161,7 @@ class Character
     /**
      * Contains the eye, hair & skin color, weight and, age
      *
-     * @param Appearance $appearance
+     * @var Appearance $appearance
      */
     private $appearance;
 
@@ -185,11 +184,6 @@ class Character
      *
      * @param $stats
      */
-//    public function __construct ()
-//    {
-//        $this->statgen = new StatGenerator();
-//        $this->stats = new Stats($this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen(), $this->statgen->heroStatGen());
-//    }
 
     /**
      * @return int
