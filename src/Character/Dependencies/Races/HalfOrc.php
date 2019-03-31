@@ -10,7 +10,7 @@ class HalfOrc extends Race
 
 
     /**
-     * Orc constructor.
+     * HalfOrc constructor.
      */
     public function __construct ()
     {
