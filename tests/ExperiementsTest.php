@@ -70,7 +70,7 @@ class ExperiementsTest extends TestCase
 
         $this->_groupStats = $groupStats;
 
-        $abilityMod = new AbilityModifier('Int', $this->_groupStats, 'In');
+        $abilityMod = new AbilityModifier($this->_groupStats, 'Int');
         $this->_abilityMod = $abilityMod;
     }
 
@@ -93,6 +93,7 @@ class ExperiementsTest extends TestCase
         try
         {
             var_dump($this->_abilityMod->getValue());
+            echo $this->_abilityMod->getName();
         } catch (Exception $e) {
             echo $e->getMessage();
         }

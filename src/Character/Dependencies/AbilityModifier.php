@@ -14,7 +14,7 @@ class AbilityModifier
      */
     private $id;
     /**
-     * ablity mod name
+     * ability mod name
      *
      * @var string
      */
@@ -28,13 +28,8 @@ class AbilityModifier
     private $value;
 
     /**
-     * The stats the value is generated on
+     * Base Stat name of the modifier
      *
-     * @var GroupStats
-     */
-    private $stats;
-
-    /**
      * @var string
      */
     private $baseStatName;
@@ -42,24 +37,21 @@ class AbilityModifier
     /**
      * Ability mod constructor.
      *
-     * @param            $name
      * @param GroupStats $stats
      * @param            $baseStat
      *
      * @throws Exception
      */
-    public function __construct ($name, GroupStats $stats, $baseStat)
+    public function __construct (GroupStats $stats, $baseStat)
     {
-        $this->name = $name;
-        $this->stats = $stats;
-
-
-        if (array_key_exists($baseStat,$stats->getStats())) {
-            $this->baseStatName = $baseStat;
-        }
-        else {
+        if (!array_key_exists($baseStat,$stats->getStats()))
+        {
             throw new Exception("base stat '$baseStat' selection is does not exist");
         }
+        $this->baseStatName = $baseStat;
+        $this->name = $stats->getStatName($baseStat).' Modifier';
+        $this->value = (int)floor(($stats->getStatValue($baseStat) - 10)/2);
+
     }
 
     /**
@@ -86,17 +78,19 @@ class AbilityModifier
         return $this->name;
     }
 
-
-    public function setValue (): void
-    {
-        $this->value = (int)floor(($this->stats->getStatValue($this->baseStatName) - 10)/2);
-    }
-
     /**
      * @return mixed
      */
     public function getValue (): int
     {
-        return (int)floor(($this->stats->getStatValue($this->baseStatName) - 10)/2);
+        return $this->value;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBaseStatName (): string
+    {
+        return $this->baseStatName;
     }
 }

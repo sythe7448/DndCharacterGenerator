@@ -40,12 +40,11 @@ class GroupStats
     /**
      * @param $name
      *
-     *
-     * @return object
+     * @return string
      */
-    public function getStat ($name): object
+    public function getStatName ($name): string
     {
-        return $this->stats[$name];
+        return $this->stats[$name]->getName();
     }
 
     /**
