@@ -38,28 +38,28 @@ class Background
     /**
      * Personality trait of the character
      *
-     * @var string
+     * @var array
      */
     private $personalityTrait;
 
     /**
      * Ideal of the character
      *
-     * @var string
+     * @var array
      */
     private $ideal;
 
     /**
      * Bond of the character
      *
-     * @var string
+     * @var array
      */
     private $bond;
 
     /**
      * Flaw of the character
      *
-     * @var string
+     * @var array
      */
     private $flaw;
 

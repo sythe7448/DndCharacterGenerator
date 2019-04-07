@@ -42,6 +42,13 @@ class Item
     private $description;
 
     /**
+     * The effect the item gives
+     *
+     * @var string|null
+     */
+    private $effect;
+
+    /**
      * @return int
      */
     public function getId (): int
@@ -119,6 +126,22 @@ class Item
     public function setDescription (string $description): void
     {
         $this->description = $description;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getEffect (): ?string
+    {
+        return $this->effect;
+    }
+
+    /**
+     * @param string|null $effect
+     */
+    public function setEffect (?string $effect): void
+    {
+        $this->effect = $effect;
     }
 
 
