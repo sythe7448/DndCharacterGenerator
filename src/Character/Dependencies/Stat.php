@@ -63,6 +63,14 @@ class Stat
     }
 
     /**
+     * @param string $name
+     */
+    public function setName (string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
      * @return mixed
      */
     public function getValue (): int
@@ -70,7 +78,12 @@ class Stat
         return $this->value;
     }
 
-
-
+    /**
+     * @param int $value
+     */
+    public function setValue (int $value): void
+    {
+        $this->value = $value;
+    }
 
 }

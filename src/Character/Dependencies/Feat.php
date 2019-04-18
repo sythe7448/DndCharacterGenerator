@@ -25,44 +25,88 @@ class Feat
     private $effect;
 
     /**
-     * The name of the stat that is required
+     * An object of required requirements
      *
-     * @var string|null
+     * @var Requirements $requirements
      */
-    private $statNameRequirement;
+    private $requirements;
 
     /**
-     * The value of the stat required
+     * Feat constructor.
      *
-     * @var int|null
+     * @param string       $name
+     * @param string       $effect
+     * @param Requirements $requirements
      */
-    private $statValueRequirement;
+    public function __construct (string $name, string $effect, Requirements $requirements)
+    {
+        $this->name = $name;
+        $this->effect = $effect;
+        $this->requirements = $requirements;
+    }
 
     /**
-     * The name of the background that is required
-     *
-     * @var string|null
+     * @return int
      */
-    private $backgroundRequirement;
+    public function getId (): int
+    {
+        return $this->id;
+    }
 
     /**
-     * The name of the class that is required
-     *
-     * @var string|null
+     * @param int $id
      */
-    private $classRequirement;
+    public function setId (int $id): void
+    {
+        $this->id = $id;
+    }
 
     /**
-     * The name of the race that is required
-     *
-     * @var string|null
+     * @return string
      */
-    private $raceRequirement;
+    public function getName (): string
+    {
+        return $this->name;
+    }
 
     /**
-     * The name of the skill that is required
-     *
-     * @var string|null
+     * @param string $name
      */
-    private $skillRequirement;
+    public function setName (string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEffect (): string
+    {
+        return $this->effect;
+    }
+
+    /**
+     * @param string $effect
+     */
+    public function setEffect (string $effect): void
+    {
+        $this->effect = $effect;
+    }
+
+    /**
+     * @return Requirements
+     */
+    public function getRequirements (): Requirements
+    {
+        return $this->requirements;
+    }
+
+    /**
+     * @param Requirements $requirements
+     */
+    public function setRequirements (Requirements $requirements): void
+    {
+        $this->requirements = $requirements;
+    }
+
 }

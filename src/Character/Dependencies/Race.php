@@ -33,7 +33,7 @@ class Race
     /**
      * The base move speed for this race (in feet per round)
      *
-     * @var RacialSpeed $speed
+     * @var int $speed
      */
     private $speed;
 

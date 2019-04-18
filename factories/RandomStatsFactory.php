@@ -3,22 +3,24 @@
 namespace Factories;
 
 use DND\Generators\StatGenerator;
-use DND\Character\Dependencies\Stats;
+use DND\Character\Dependencies\Stat;
 
 class RandomStatsFactory
 {
 
-    public function buildHero(): Stats
+    public function buildHeroStat(): Stat
     {
+        $name = 'test1';
         $statGen = new StatGenerator();
-        $heroStat = $statGen->heroStats();
-        return new Stats(...$heroStat);
+        $heroStat = $statGen->heroStatGen();
+        return new Stat($name, $heroStat);
     }
 
-    public function buildNpc(): Stats
+    public function buildNpc(): Stat
     {
+        $name = 'test2';
         $statGen = new StatGenerator();
-        $npcStat = $statGen->npcStats();
-        return new Stats(...$npcStat);
+        $npcStat = $statGen->statGen();
+        return new Stat($name,$npcStat);
     }
 }

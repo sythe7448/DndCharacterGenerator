@@ -1,9 +1,6 @@
 <?php
 namespace Tests;
 
-use DND\Character\Dependencies\AbilityScores;
-use DND\Character\Dependencies\Skills;
-use DND\Character\Dependencies\Stats;
 use DND\Character\Dependencies\Stat;
 use DND\Character\Dependencies\GroupStats;
 use DND\Character\Dependencies\AbilityModifier;
@@ -13,20 +10,6 @@ use Exception;
 
 class ExperiementsTest extends TestCase
 {
-    /**
-     * @var Stats
-     */
-    private $_class;
-
-    /**
-     * @var AbilityScores
-     */
-    private $_abilityScores;
-
-    /**
-     * @var Skills
-     */
-    private $_skills;
 
     /**
      * @var Stat
@@ -48,9 +31,6 @@ class ExperiementsTest extends TestCase
         parent::setUp();
         $RandomStatsFactory = new RandomStatsFactory();
         $heroStats = $RandomStatsFactory->buildHero();
-        $this->_class = $heroStats;
-        $this->_abilityScores = new AbilityScores($this->_class);
-        $this->_skills = new Skills($this->_abilityScores, 16);
 
         $stat1 = new Stat('Str', 16);
         $stat2 = new Stat('Dex', 12);
@@ -72,15 +52,6 @@ class ExperiementsTest extends TestCase
 
         $abilityMod = new AbilityModifier($this->_groupStats, 'Int');
         $this->_abilityMod = $abilityMod;
-    }
-
-    public function testShowStats (): void
-    {
-        echo $this->_abilityScores->getDexterityScore();
-        var_dump($this->_class);
-        var_dump($this->_abilityScores);
-        var_dump($this->_skills);
-
     }
 
     public function testGroupStats (): void
