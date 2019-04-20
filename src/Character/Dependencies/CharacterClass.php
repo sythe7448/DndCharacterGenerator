@@ -1,6 +1,5 @@
 <?php
 declare (strict_types=1);
-
 namespace DND\Character\Dependencies;
 
 use DND\Character\Dependencies\CharacterSubclass;

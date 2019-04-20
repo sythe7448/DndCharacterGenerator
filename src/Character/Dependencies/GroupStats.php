@@ -1,7 +1,6 @@
 <?php
-
+declare (strict_types=1);
 namespace DND\Character\Dependencies;
-
 
 class GroupStats
 {
@@ -10,7 +9,6 @@ class GroupStats
      * @var array
      */
     private $stats;
-
 
     public function add (Stat $stat): void
     {

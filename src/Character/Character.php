@@ -3,8 +3,8 @@ declare (strict_types=1);
 
 namespace DND\Character;
 
-use DND\Character\Dependencies\Stats;
-use DND\Generators\StatGenerator;
+use DND\Character\Dependencies\GroupSkills;
+use DND\Character\Dependencies\GroupStats;
 
 class Character
 {
@@ -61,13 +61,6 @@ class Character
     private $speed;
 
     /**
-     * The vision of the character
-     *
-     * @var Race $vision
-     */
-    private $vision;
-
-    /**
      * The initiative bonus of the character when combat starts
      *
      * @var int
@@ -91,14 +84,14 @@ class Character
     /**
      * The stats of of the character
      *
-     * @param Stats $stats
+     * @param GroupStats $stats
      */
     private $stats;
 
     /**
      * The skills of the character
      *
-     * @var Skills $skills
+     * @var GroupSkills $skills
      */
     private $skills;
 
@@ -108,13 +101,6 @@ class Character
      * @var int
      */
     private $hitPoints;
-
-    /**
-     * The current HP of the character
-     *
-     * @var int
-     */
-    private $currentHitPoints;
 
     /**
      * The current armor class of the character
@@ -178,43 +164,5 @@ class Character
      * @var string
      */
     private $gameMasterNotes;
-
-    /**
-     * Character constructor.
-     *
-     * @param $stats
-     */
-
-    /**
-     * @return int
-     */
-    public function getId (): int
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param int $id
-     */
-    public function setId (int $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName ()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName ($name): void
-    {
-        $this->name = $name;
-    }
 
 }

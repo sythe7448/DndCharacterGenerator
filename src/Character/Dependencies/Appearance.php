@@ -1,6 +1,5 @@
 <?php
 declare (strict_types=1);
-
 namespace DND\Character\Dependencies;
 
 class Appearance
@@ -47,13 +46,6 @@ class Appearance
      * @var float
      */
     private $weight;
-
-    /**
-     * The age of the character
-     *
-     * @var int
-     */
-    private $age;
 
     /**
      * Appearance constructor.

@@ -3,7 +3,7 @@
 namespace DND\Character\Dependencies\Races;
 
 use DND\Character\Dependencies\Race;
-use DND\Character\Dependencies\Stats;
+use DND\Character\Dependencies\GroupStats;
 
 class HalfOrc extends Race
 {
@@ -18,7 +18,6 @@ class HalfOrc extends Race
         $this->setStats(new Stats(2, 0, 1, 0, 0, 0));
         $this->setSize('Medium');
         $this->setSpeed(30);
-        $this->setVision('Darkvision');
         $this->setLanguages(['Common', 'Orc']);
         $this->setFeatures([
             'Menacing' => 'You gain proficiency in the Intimidation skill.',

@@ -1,13 +1,16 @@
 <?php
 declare (strict_types=1);
-
 namespace DND\Character\Dependencies;
-
-use DND\Character\Dependencies\Stats;
 
 class Race
 {
 
+    /**
+     * The Id of the race
+     *
+     * @var int
+     */
+    private $id;
 
     /**
      * The name of the race
@@ -19,16 +22,23 @@ class Race
     /**
      * The stat modifiers of the race
      *
-     * @var Stats $stats
+     * @var array
      */
     private $stats;
 
     /**
-     * The size of the race
+     * The minimum and maximum size of the race
      *
      * @var string
      */
     private $size;
+
+    /**
+     * min and ma height in inches
+     *
+     * @var array
+     */
+    private $height;
 
     /**
      * The base move speed for this race (in feet per round)
@@ -36,13 +46,6 @@ class Race
      * @var int $speed
      */
     private $speed;
-
-    /**
-     * The vision of the race
-     *
-     * @var string
-     */
-    private $vision;
 
     /**
      * The languages know by all of this race
@@ -58,6 +61,52 @@ class Race
      */
     private $features;
 
+    /**
+     * The minimum and maximum age
+     *
+     * @var array
+     */
+    private $age;
+
+    /**
+     * Race constructor.
+     *
+     * @param string $name
+     * @param array  $stats
+     * @param string $size
+     * @param array  $height
+     * @param int    $speed
+     * @param array  $languages
+     * @param array  $features
+     * @param array  $age
+     */
+    public function __construct (string $name, array $stats, string $size, array $height, int $speed, array $languages, array $features, array $age)
+    {
+        $this->name = $name;
+        $this->stats = $stats;
+        $this->size = $size;
+        $this->height = $height;
+        $this->speed = $speed;
+        $this->languages = $languages;
+        $this->features = $features;
+        $this->age = $age;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId (): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId (int $id): void
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return string
@@ -76,17 +125,17 @@ class Race
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getStats ()
+    public function getStats (): array
     {
         return $this->stats;
     }
 
     /**
-     * @param Stats $stats
+     * @param array $stats
      */
-    public function setStats (Stats $stats): void
+    public function setStats (array $stats): void
     {
         $this->stats = $stats;
     }
@@ -108,35 +157,35 @@ class Race
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getSpeed ()
+    public function getHeight (): array
+    {
+        return $this->height;
+    }
+
+    /**
+     * @param array $height
+     */
+    public function setHeight (array $height): void
+    {
+        $this->height = $height;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSpeed (): int
     {
         return $this->speed;
     }
 
     /**
-     * @param mixed $speed
+     * @param int $speed
      */
-    public function setSpeed ($speed): void
+    public function setSpeed (int $speed): void
     {
         $this->speed = $speed;
-    }
-
-    /**
-     * @return string
-     */
-    public function getVision (): string
-    {
-        return $this->vision;
-    }
-
-    /**
-     * @param string $vision
-     */
-    public function setVision (string $vision): void
-    {
-        $this->vision = $vision;
     }
 
     /**
@@ -171,5 +220,20 @@ class Race
         $this->features = $features;
     }
 
+    /**
+     * @return array
+     */
+    public function getAge (): array
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param array $age
+     */
+    public function setAge (array $age): void
+    {
+        $this->age = $age;
+    }
 
 }
