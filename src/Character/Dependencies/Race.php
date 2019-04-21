@@ -59,7 +59,7 @@ class Race
      *
      * @var array
      */
-    private $features;
+    private $traits;
 
     /**
      * The minimum and maximum age
@@ -67,6 +67,13 @@ class Race
      * @var array
      */
     private $age;
+
+    /**
+     * List of subraces this race has
+     *
+     * @var array
+     */
+    private $subraces;
 
     /**
      * Race constructor.
@@ -77,10 +84,11 @@ class Race
      * @param array  $height
      * @param int    $speed
      * @param array  $languages
-     * @param array  $features
+     * @param array  $traits
      * @param array  $age
+     * @param array  $subraces
      */
-    public function __construct (string $name, array $stats, string $size, array $height, int $speed, array $languages, array $features, array $age)
+    public function __construct (string $name, array $stats, string $size, array $height, int $speed, array $languages, array $traits, array $age, array $subraces)
     {
         $this->name = $name;
         $this->stats = $stats;
@@ -88,8 +96,9 @@ class Race
         $this->height = $height;
         $this->speed = $speed;
         $this->languages = $languages;
-        $this->features = $features;
+        $this->traits = $traits;
         $this->age = $age;
+        $this->subraces = $subraces;
     }
 
     /**
@@ -207,17 +216,17 @@ class Race
     /**
      * @return array
      */
-    public function getFeatures (): array
+    public function getTraits (): array
     {
-        return $this->features;
+        return $this->traits;
     }
 
     /**
-     * @param array $features
+     * @param array $traits
      */
-    public function setFeatures (array $features): void
+    public function setTraits (array $traits): void
     {
-        $this->features = $features;
+        $this->traits = $traits;
     }
 
     /**
@@ -234,6 +243,22 @@ class Race
     public function setAge (array $age): void
     {
         $this->age = $age;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSubraces (): array
+    {
+        return $this->subraces;
+    }
+
+    /**
+     * @param array $subraces
+     */
+    public function setSubraces (array $subraces): void
+    {
+        $this->subraces = $subraces;
     }
 
 }

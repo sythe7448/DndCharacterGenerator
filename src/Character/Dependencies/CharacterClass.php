@@ -48,7 +48,7 @@ class CharacterClass
      *
      * @var array
      */
-    private $starting_equipment;
+    private $startingEquipment;
 
     /**
      * The subclass of the character
@@ -75,13 +75,13 @@ class CharacterClass
      * @param \DND\Character\Dependencies\CharacterSubclass $subclass
      * @param \DND\Character\Dependencies\ClassSpells       $spellCasting
      */
-    public function __construct (string $name, int $hitDie, array $proficiencyChoices, array $proficiencies, array $starting_equipment, \DND\Character\Dependencies\CharacterSubclass $subclass, \DND\Character\Dependencies\ClassSpells $spellCasting)
+    public function __construct (string $name, int $hitDie, array $proficiencyChoices, array $proficiencies, array $startingEquipment, \DND\Character\Dependencies\CharacterSubclass $subclass, \DND\Character\Dependencies\ClassSpells $spellCasting)
     {
         $this->name = $name;
         $this->hitDie = $hitDie;
         $this->proficiencyChoices = $proficiencyChoices;
         $this->proficiencies = $proficiencies;
-        $this->starting_equipment = $starting_equipment;
+        $this->startingEquipment = $startingEquipment;
         $this->subclass = $subclass;
         $this->spellCasting = $spellCasting;
     }
@@ -171,15 +171,15 @@ class CharacterClass
      */
     public function getStartingEquipment (): array
     {
-        return $this->starting_equipment;
+        return $this->startingEquipment;
     }
 
     /**
-     * @param array $starting_equipment
+     * @param array $startingEquipment
      */
-    public function setStartingEquipment (array $starting_equipment): void
+    public function setStartingEquipment (array $startingEquipment): void
     {
-        $this->starting_equipment = $starting_equipment;
+        $this->startingEquipment = $startingEquipment;
     }
 
     /**

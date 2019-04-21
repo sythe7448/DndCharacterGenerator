@@ -111,6 +111,7 @@ class Background
         $this->requirements = $requirements;
     }
 
+
     /**
      * @return int
      */

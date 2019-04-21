@@ -28,7 +28,7 @@ class Item
     private $weight;
 
     /**
-     * The value of the item
+     * The value of the item in GP
      *
      * @var float
      */
@@ -47,6 +47,33 @@ class Item
      * @var string|null
      */
     private $effect;
+
+    /**
+     * The category of the item IE; ring, cloak, armor, weapon, treasure ect
+     *
+     * @var string|Null
+     */
+    private $itemCategory;
+
+    /**
+     * Item constructor.
+     *
+     * @param string      $name
+     * @param float       $weight
+     * @param float       $value
+     * @param string      $description
+     * @param string|null $effect
+     * @param Null|string $itemCategory
+     */
+    public function __construct (string $name, float $weight, float $value, string $description, ?string $effect, ?string $itemCategory)
+    {
+        $this->name = $name;
+        $this->weight = $weight;
+        $this->value = $value;
+        $this->description = $description;
+        $this->effect = $effect;
+        $this->itemCategory = $itemCategory;
+    }
 
     /**
      * @return int
@@ -143,6 +170,23 @@ class Item
     {
         $this->effect = $effect;
     }
+
+    /**
+     * @return Null|string
+     */
+    public function getItemCategory (): ?string
+    {
+        return $this->itemCategory;
+    }
+
+    /**
+     * @param Null|string $itemCategory
+     */
+    public function setItemCategory (?string $itemCategory): void
+    {
+        $this->itemCategory = $itemCategory;
+    }
+
 
 
 }
