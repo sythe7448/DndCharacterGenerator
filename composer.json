@@ -11,13 +11,19 @@
   ],
   "require": {
     "roave/security-advisories": "dev-master",
-    "phpunit/phpunit": "8.0.5"
+    "phpunit/phpunit": "8.0.5",
+    "ext-json": "*"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
   },
   "autoload": {
     "psr-4": {
       "DND\\": "src/",
       "Tests\\": "tests/",
-      "Factories\\": "factories/"
+      "Factories\\": "factories/",
+      "Assets\\": "assets/"
     }
   }
 }

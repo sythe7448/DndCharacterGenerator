@@ -20,39 +20,39 @@ class Race
     private $name;
 
     /**
-     * The stat modifiers of the race
+     * The initials of the source book for this material.
      *
-     * @var array
+     * @var string
      */
-    private $stats;
+    private $source;
 
     /**
-     * The minimum and maximum size of the race
+     * The size of the creature determined by DnD mechanics.
      *
      * @var string
      */
     private $size;
 
     /**
-     * min and ma height in inches
+     * The type and amount of movement this character has.
      *
-     * @var array
-     */
-    private $height;
-
-    /**
-     * The base move speed for this race (in feet per round)
-     *
-     * @var int $speed
+     * @var \stdClass $speed
      */
     private $speed;
 
     /**
-     * The languages know by all of this race
+     * The stat modifiers of the race.
      *
      * @var array
      */
-    private $languages;
+    private $stats;
+
+    /**
+     * Various fluff features about the race.
+     *
+     * @var array
+     */
+    private $entries;
 
     /**
      * The race features
@@ -62,44 +62,11 @@ class Race
     private $traits;
 
     /**
-     * The minimum and maximum age
+     * The languages known by all of this race
      *
      * @var array
      */
-    private $age;
-
-    /**
-     * List of subraces this race has
-     *
-     * @var array
-     */
-    private $subraces;
-
-    /**
-     * Race constructor.
-     *
-     * @param string $name
-     * @param array  $stats
-     * @param string $size
-     * @param array  $height
-     * @param int    $speed
-     * @param array  $languages
-     * @param array  $traits
-     * @param array  $age
-     * @param array  $subraces
-     */
-    public function __construct (string $name, array $stats, string $size, array $height, int $speed, array $languages, array $traits, array $age, array $subraces)
-    {
-        $this->name = $name;
-        $this->stats = $stats;
-        $this->size = $size;
-        $this->height = $height;
-        $this->speed = $speed;
-        $this->languages = $languages;
-        $this->traits = $traits;
-        $this->age = $age;
-        $this->subraces = $subraces;
-    }
+    private $languages;
 
     /**
      * @return int
@@ -134,19 +101,19 @@ class Race
     }
 
     /**
-     * @return array
+     * @return string
      */
-    public function getStats (): array
+    public function getSource (): string
     {
-        return $this->stats;
+        return $this->source;
     }
 
     /**
-     * @param array $stats
+     * @param string $source
      */
-    public function setStats (array $stats): void
+    public function setSource (string $source): void
     {
-        $this->stats = $stats;
+        $this->source = $source;
     }
 
     /**
@@ -166,33 +133,17 @@ class Race
     }
 
     /**
-     * @return array
+     * @return \stdClass
      */
-    public function getHeight (): array
-    {
-        return $this->height;
-    }
-
-    /**
-     * @param array $height
-     */
-    public function setHeight (array $height): void
-    {
-        $this->height = $height;
-    }
-
-    /**
-     * @return int
-     */
-    public function getSpeed (): int
+    public function getSpeed (): \stdClass
     {
         return $this->speed;
     }
 
     /**
-     * @param int $speed
+     * @param \stdClass $speed
      */
-    public function setSpeed (int $speed): void
+    public function setSpeed (\stdClass $speed): void
     {
         $this->speed = $speed;
     }
@@ -200,17 +151,33 @@ class Race
     /**
      * @return array
      */
-    public function getLanguages (): array
+    public function getStats (): array
     {
-        return $this->languages;
+        return $this->stats;
     }
 
     /**
-     * @param array $languages
+     * @param array $stats
      */
-    public function setLanguages (array $languages): void
+    public function setStats (array $stats): void
     {
-        $this->languages = $languages;
+        $this->stats = $stats;
+    }
+
+    /**
+     * @return array
+     */
+    public function getEntries (): array
+    {
+        return $this->entries;
+    }
+
+    /**
+     * @param array $entries
+     */
+    public function setEntries (array $entries): void
+    {
+        $this->entries = $entries;
     }
 
     /**
@@ -232,33 +199,17 @@ class Race
     /**
      * @return array
      */
-    public function getAge (): array
+    public function getLanguages (): array
     {
-        return $this->age;
+        return $this->languages;
     }
 
     /**
-     * @param array $age
+     * @param array $languages
      */
-    public function setAge (array $age): void
+    public function setLanguages (array $languages): void
     {
-        $this->age = $age;
-    }
-
-    /**
-     * @return array
-     */
-    public function getSubraces (): array
-    {
-        return $this->subraces;
-    }
-
-    /**
-     * @param array $subraces
-     */
-    public function setSubraces (array $subraces): void
-    {
-        $this->subraces = $subraces;
+        $this->languages = $languages;
     }
 
 }
